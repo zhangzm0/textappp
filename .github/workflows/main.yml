@@ -18,6 +18,10 @@ jobs:
 
       - name: 设置 Gradle
         uses: gradle/actions/setup-gradle@v4
+        
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
 
       - name: Build Debug
         run: ./gradlew assembleDebug
